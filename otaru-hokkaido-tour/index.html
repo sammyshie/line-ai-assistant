@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北海道一日遊｜小樽·積丹神威岬·島武意海岸·餘市蒸餾所</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif; background: #f5f7fa; color: #2d3748; line-height: 1.7; }
+    .hero { background: linear-gradient(135deg, #1a5276 0%, #2980b9 50%, #5dade2 100%); color: white; padding: 48px 24px 40px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="80" r="60" fill="rgba(255,255,255,0.05)"/><circle cx="80" cy="20" r="40" fill="rgba(255,255,255,0.05)"/></svg>'); pointer-events: none; }
+    .hero-tag { display: inline-block; background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4); border-radius: 20px; padding: 4px 16px; font-size: 13px; margin-bottom: 16px; letter-spacing: 1px; }
+    .hero h1 { font-size: 26px; font-weight: 700; line-height: 1.4; margin-bottom: 16px; }
+    .hero-badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
+    .badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.3); border-radius: 8px; padding: 6px 14px; font-size: 14px; display: flex; align-items: center; gap: 6px; }
+    .badge .num { font-size: 20px; font-weight: 700; color: #ffd700; }
+    .container { max-width: 680px; margin: 0 auto; padding: 20px 16px 60px; }
+    .price-card { background: white; border-radius: 16px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); display: flex; justify-content: space-between; align-items: center; }
+    .price-left .label { font-size: 13px; color: #718096; margin-bottom: 4px; }
+    .price-left .price { font-size: 32px; font-weight: 800; color: #e74c3c; }
+    .price-left .note { font-size: 12px; color: #a0aec0; margin-top: 2px; }
+    .price-btn { background: #e74c3c; color: white; border: none; border-radius: 10px; padding: 12px 24px; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; }
+    .price-btn:hover { background: #c0392b; }
+    .section { background: white; border-radius: 16px; padding: 24px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    .section-title { font-size: 17px; font-weight: 700; color: #1a5276; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+    .section-title .icon { font-size: 20px; }
+    .overview-text { font-size: 15px; color: #4a5568; line-height: 1.8; }
+    .timeline { position: relative; padding-left: 28px; }
+    .timeline::before { content: ''; position: absolute; left: 9px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(to bottom, #2980b9, #5dade2); border-radius: 2px; }
+    .timeline-item { position: relative; margin-bottom: 20px; }
+    .timeline-item::before { content: ''; position: absolute; left: -22px; top: 6px; width: 12px; height: 12px; background: #2980b9; border-radius: 50%; border: 2px solid white; box-shadow: 0 0 0 2px #2980b9; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-time { font-size: 12px; color: #e74c3c; font-weight: 700; margin-bottom: 2px; }
+    .timeline-spot { font-size: 15px; font-weight: 700; color: #2d3748; margin-bottom: 4px; }
+    .timeline-desc { font-size: 13px; color: #718096; line-height: 1.6; }
+    .timeline-badge { display: inline-block; background: #ebf8ff; color: #2980b9; border-radius: 4px; padding: 1px 8px; font-size: 11px; margin-right: 4px; }
+    .spotlights { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .spotlight { background: linear-gradient(135deg, #ebf9ff 0%, #e8f4fd 100%); border: 1px solid #bee3f8; border-radius: 12px; padding: 16px; }
+    .spotlight .emoji { font-size: 28px; margin-bottom: 8px; display: block; }
+    .spotlight .name { font-size: 14px; font-weight: 700; color: #1a5276; margin-bottom: 4px; }
+    .spotlight .desc { font-size: 12px; color: #4a5568; line-height: 1.5; }
+    .includes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; }
+    .include-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; color: #2d3748; }
+    .include-item .check { color: #27ae60; font-weight: 700; }
+    .include-item .cross { color: #e74c3c; font-weight: 700; }
+    .reviews { display: flex; flex-direction: column; gap: 12px; }
+    .review { background: #f8fafc; border-radius: 10px; padding: 14px; border-left: 3px solid #2980b9; }
+    .review-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .reviewer { font-size: 13px; font-weight: 600; color: #2d3748; }
+    .review-stars { color: #f39c12; font-size: 13px; }
+    .review-text { font-size: 13px; color: #4a5568; line-height: 1.6; }
+    .review-date { font-size: 11px; color: #a0aec0; margin-top: 4px; }
+    .info-grid { display: flex; flex-direction: column; gap: 10px; }
+    .info-row { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; color: #2d3748; }
+    .info-key { min-width: 80px; color: #718096; font-size: 13px; padding-top: 2px; }
+    .info-val { flex: 1; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag { background: #edf2f7; color: #4a5568; border-radius: 6px; padding: 4px 10px; font-size: 12px; }
+    .cancel-badge { display: inline-flex; align-items: center; gap: 4px; background: #d4edda; color: #155724; border-radius: 6px; padding: 3px 10px; font-size: 12px; }
+    .warning-box { background: #fffbeb; border: 1px solid #f6e05e; border-radius: 10px; padding: 14px; margin-top: 12px; }
+    .warning-box .title { font-size: 13px; font-weight: 700; color: #744210; margin-bottom: 6px; }
+    .warning-box ul { font-size: 12px; color: #744210; padding-left: 18px; }
+    .warning-box li { margin-bottom: 3px; }
+    .footer { text-align: center; padding: 32px 16px; font-size: 12px; color: #a0aec0; }
+    @media (max-width: 480px) {
+      .spotlights { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 21px; }
+      .includes-grid { grid-template-columns: 1fr; }
+      .price-card { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-tag">🗾 北海道經典一日遊</div>
+  <h1>小樽運河 · 積丹神威岬<br>島武意海岸 · 餘市威士忌</h1>
+  <div style="font-size:14px;opacity:0.85;margin-bottom:4px;">從浪漫港城到壯闊海岸，一天感受北海道的多元風情</div>
+  <div class="hero-badges">
+    <div class="badge">⭐ <span class="num">4.9</span> / 5（共50則評價）</div>
+    <div class="badge">⏱ 10小時</div>
+    <div class="badge">🗣 英/中/日語導遊</div>
+    <div class="badge">🚐 舒適巴士</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- 價格卡片 -->
+  <div class="price-card">
+    <div class="price-left">
+      <div class="label">每人價格</div>
+      <div class="price">NT$ 1,396</div>
+      <div class="note">最低成團人數：10人｜24小時前可免費取消</div>
+    </div>
+    <a class="price-btn" href="https://www.klook.com/zh-TW/activity/199716-otaru-cape-kamui-shimamui-coast-yoichi-distillery-coach-tour/" target="_blank">查看詳情</a>
+  </div>
+
+  <!-- 行程概覽 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">🌊</span> 行程概覽</div>
+    <p class="overview-text">從浪漫的小樽運河出發，漫步復古紅磚倉庫街道；走訪日本威士忌發源地——餘市蒸餾所；下午深入積丹半島，在神威岬遠眺「積丹藍」，並於島武意海岸俯瞰寶石般清澈的海灣。一天之內兼顧港町風情、百年釀酒文化與壯闊自然海岸，適合情侶、親子與家庭共享。</p>
+  </div>
+
+  <!-- 行程時間線 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">🗺</span> 行程時刻表</div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-time">08:40 去程</div>
+        <div class="timeline-spot">小樽市</div>
+        <div class="timeline-desc">沿運河漫步，欣賞石造倉庫與水面倒影；逛堺町通商店街，感受復古港城氛圍</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">▶ 巴士 40分鐘</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">上午</div>
+        <div class="timeline-spot">Nikka 餘市蒸餾所</div>
+        <div class="timeline-desc">竹鶴政孝創立的日本威士忌原點，傳統煤炭直火蒸餾工藝（不包含付費參觀區域）</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">▶ 巴士 1小時</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">下午</div>
+        <div class="timeline-spot">神威岬</div>
+        <div class="timeline-desc">積丹半島代表景觀，狹長步道延伸至海岬盡頭，碧藍懸崖與日本海壯闊對比</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">▶ 巴士 30分鐘</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">下午</div>
+        <div class="timeline-spot">島武意海岸</div>
+        <div class="timeline-desc">穿過隧道豁然開朗，透明度極高的海水入選「<span class="timeline-badge">日本海岸百選</span>」，視覺衝擊力極強</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">▶ 巴士 20分鐘</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">下午</div>
+        <div class="timeline-spot">黃金岬</div>
+        <div class="timeline-desc">欣賞經典「積丹ブルー」海岸線，懸崖與層次分明海水在陽光下呈現夢幻藍色漸變</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-time">18:40 回程 → 札幌站北口</div>
+      </div>
+    </div>
+    <div style="font-size:12px;color:#a0aec0;margin-top:16px;padding-top:12px;border-top:1px solid #edf2f7;">* 行程可能視交通與天候狀況調整｜集合地點：札幌站北口5號站牌，請提早10分鐘抵達</div>
+  </div>
+
+  <!-- 必訪亮點 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">✨</span> 四大必訪亮點</div>
+    <div class="spotlights">
+      <div class="spotlight">
+        <span class="emoji">🚢</span>
+        <div class="name">小樽運河</div>
+        <div class="desc">浪漫港町，復古紅磚倉庫與運河倒影交織，北海道最具代表性的觀光城市之一</div>
+      </div>
+      <div class="spotlight">
+        <span class="emoji">🥃</span>
+        <div class="name">餘市蒸餾所</div>
+        <div class="desc">日本威士忌發源地，傳統煤炭直火蒸餾，百年釀酒文化與紅磚建築群</div>
+      </div>
+      <div class="spotlight">
+        <span class="emoji">🏔️</span>
+        <div class="name">神威岬</div>
+        <div class="desc">積丹藍代表，狹長岬角步道，壯麗懸崖與碧藍日本海構成震撼視角</div>
+      </div>
+      <div class="spotlight">
+        <span class="emoji">🌊</span>
+        <div class="name">島武意海岸</div>
+        <div class="desc">日本海岸百選之一，隧道盡頭豁然開朗，清澈見底的積丹海域</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 費用說明 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">💰</span> 費用說明</div>
+    <div class="includes-grid">
+      <div class="include-item"><span class="check">✓</span> 英語/中文/日語導遊</div>
+      <div class="include-item"><span class="check">✓</span> 札幌來回接送</div>
+      <div class="include-item"><span class="check">✓</span> 過路費 / 停車費 / 燃油費</div>
+      <div class="include-item"><span class="check">✓</span> 供應商提供保險</div>
+      <div class="include-item"><span class="check">✓</span> 景點門票（餘市蒸餾所）</div>
+      <div class="include-item"><span class="cross">✗</span> 餐食及飲料</div>
+      <div class="include-item"><span class="cross">✗</span> 其他個人消費</div>
+      <div class="include-item"><span class="cross">✗</span> 小費</div>
+    </div>
+    <div class="warning-box">
+      <div class="title">⚠️ 貼心提醒</div>
+      <ul>
+        <li>行程包含大量步行及階梯攀爬，請穿著步行鞋 / 登山鞋</li>
+        <li>神威岬來回步行約40分鐘、黃金岬來回約20分鐘，需有一定體力</li>
+        <li>「女人禁制の門」入口可能因天氣（降雨/強風）調整開放時間</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 實用資訊 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">📋</span> 實用資訊</div>
+    <div class="info-grid">
+      <div class="info-row">
+        <div class="info-key">集合地點</div>
+        <div class="info-val">札幌站北口 5號站牌（<a href="https://maps.app.goo.gl/dXZYwp6osEiqUMRF7" target="_blank" style="color:#2980b9;">Google地圖</a>）</div>
+      </div>
+      <div class="info-row">
+        <div class="info-key">集合時間</div>
+        <div class="info-val">08:40（請提早10分鐘抵達，遲到視同放棄）</div>
+      </div>
+      <div class="info-row">
+        <div class="info-key">行程語言</div>
+        <div class="info-val">英語 / 中文 / 日語（湊團導覽）</div>
+      </div>
+      <div class="info-row">
+        <div class="info-key">行程時長</div>
+        <div class="info-val">10小時（08:40 出發 → 18:40 返回）</div>
+      </div>
+      <div class="info-row">
+        <div class="info-key">成團人數</div>
+        <div class="info-val">最低10人，否則改期或全額退款</div>
+      </div>
+      <div class="info-row">
+        <div class="info-key">年齡限制</div>
+        <div class="info-val">無年齡限制｜0-2歲不佔位兒童免費</div>
+      </div>
+      <div class="info-row">
+        <div class="info-key">取消政策</div>
+        <div class="info-val"><span class="cancel-badge">✓</span> 活動前24小時（當地時間）可免費取消</div>
+      </div>
+      <div class="info-row">
+        <div class="info-key">行前通知</div>
+        <div class="info-val">出行前一天 15:00 後會發送導遊聯繫方式與車牌號至信箱</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 旅客評價 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">💬</span> 旅客評價（4.9/5）</div>
+    <div class="reviews">
+      <div class="review">
+        <div class="review-header">
+          <span class="reviewer">Marianne</span>
+          <span class="review-stars">★★★★★</span>
+        </div>
+        <div class="review-text">海水清澈湛藍的程度超乎想像！還能前往視野極佳的景點，並在小樽和余市體驗當地特色，導遊也很開朗且非常細心，這真是一趟令人難忘又愉快的旅程！下次去北海道時一定會再選擇這個行程！</div>
+        <div class="review-date">2026/04/24</div>
+      </div>
+      <div class="review">
+        <div class="review-header">
+          <span class="reviewer">Alvin</span>
+          <span class="review-stars">★★★★★</span>
+        </div>
+        <div class="review-text">我們的導遊 Hide-San 分享了背景資訊，詳細解釋，並分享了更多關於札幌的見解。他效率很高，時間掌握得很好。請注意會涉及一些步行和短暫的徒步，但這一切都非常值得！</div>
+        <div class="review-date">2026/04/20</div>
+      </div>
+      <div class="review">
+        <div class="review-header">
+          <span class="reviewer">BEE</span>
+          <span class="review-stars">★★★★★</span>
+        </div>
+        <div class="review-text">我們遊覽了小樽、余市威士忌蒸餾所、神威岬、黃金岬等主要景點，每個地方都有其獨特的魅力。真正讓這次體驗脫穎而出的是導遊 Joey，她知識淵博卻不會讓人感到壓力，總是非常耐心地回答問題。強烈推薦！</div>
+        <div class="review-date">2026/04/16</div>
+      </div>
+      <div class="review">
+        <div class="review-header">
+          <span class="reviewer">Kelly</span>
+          <span class="review-stars">★★★★★</span>
+        </div>
+        <div class="review-text">Hide Cai 是最棒、最有熱情的導遊！這是一趟非常愉快又輕鬆的春季一日遊 :)</div>
+        <div class="review-date">2026/04/27</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 行前叮嚀 -->
+  <div class="section">
+    <div class="section-title"><span class="icon">🎒</span> 行前叮嚀</div>
+    <div class="tag-list" style="margin-bottom:12px;">
+      <span class="tag">👟 穿著步行鞋 / 登山鞋</span>
+      <span class="tag">🧴 攜帶防曬與帽子</span>
+      <span class="tag">💊 暈車藥（車程較長）</span>
+      <span class="tag">📱 保持手機暢通</span>
+      <span class="tag">⏰ 提早10分鐘到場</span>
+      <span class="tag">🎒 建議輕裝出行</span>
+    </div>
+    <div class="warning-box">
+      <div class="title">❄️ 冬季特別注意</div>
+      <ul>
+        <li>冬季道路受天氣影響較大，部分景點可能縮短停留或取消</li>
+        <li>路面積雪或結冰時，請特別注意步道濕滑</li>
+        <li>建議洋蔥式穿法，方便依溫度調整</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  資料來源：Klook｜整理：蝦米龍蝦 🦞<br>
+  <a href="https://www.klook.com/zh-TW/activity/199716-otaru-cape-kamui-shimamui-coast-yoichi-distillery-coach-tour/" target="_blank" style="color:#a0aec0;">查看原始頁面</a>
+</div>
+
+</body>
+</html>
