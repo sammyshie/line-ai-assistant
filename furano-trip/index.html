@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>北海道富良野美瑛一日遊｜景點懶人包</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --lavender: #C4A7D7;
+      --lavender-deep: #8B6BAE;
+      --sky-blue: #A8D8EA;
+      --tiffany: #5EC8D8;
+      --cream: #FDF8F0;
+      --warm-white: #FFFCF7;
+      --charcoal: #2D2A32;
+      --forest: #4A7C59;
+      --wheat: #E8D5B7;
+      --soft-red: #D4726A;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', sans-serif;
+      background: var(--warm-white);
+      color: var(--charcoal);
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      background: linear-gradient(160deg, #e8f4f8 0%, #f5e6f0 50%, #e8f0f5 100%);
+      overflow: hidden;
+      padding: 60px 24px;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 50%, rgba(196,167,215,0.15) 0%, transparent 50%),
+                  radial-gradient(ellipse at 70% 50%, rgba(94,200,216,0.12) 0%, transparent 50%);
+      animation: floatBg 20s ease-in-out infinite;
+    }
+
+    @keyframes floatBg {
+      0%, 100% { transform: translate(0, 0) rotate(0deg); }
+      50% { transform: translate(-3%, 2%) rotate(2deg); }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(196,167,215,0.3);
+      border-radius: 100px;
+      padding: 8px 20px;
+      font-size: 0.85rem;
+      color: var(--lavender-deep);
+      letter-spacing: 0.05em;
+      margin-bottom: 32px;
+      animation: fadeUp 0.8s ease-out;
+    }
+
+    .hero-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: 0.04em;
+      color: var(--charcoal);
+      max-width: 700px;
+      animation: fadeUp 0.8s ease-out 0.15s both;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, var(--lavender-deep), var(--tiffany));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: #6b6574;
+      margin-top: 20px;
+      max-width: 480px;
+      font-weight: 300;
+      animation: fadeUp 0.8s ease-out 0.3s both;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 32px;
+      margin-top: 40px;
+      animation: fadeUp 0.8s ease-out 0.45s both;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .hero-meta-item .num {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--lavender-deep);
+    }
+
+    .hero-meta-item .label {
+      font-size: 0.78rem;
+      color: #8a8394;
+      letter-spacing: 0.08em;
+    }
+
+    .hero-cta {
+      margin-top: 48px;
+      animation: fadeUp 0.8s ease-out 0.6s both;
+    }
+
+    .hero-cta a {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--lavender-deep);
+      color: white;
+      text-decoration: none;
+      padding: 16px 36px;
+      border-radius: 100px;
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 24px rgba(139,107,174,0.35);
+    }
+
+    .hero-cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(139,107,174,0.5);
+    }
+
+    .scroll-hint {
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: #a09aad;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      animation: bounce 2s ease-in-out infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(6px); }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Section: 景點 */
+    .section {
+      padding: 100px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 60px;
+    }
+
+    .section-header h2 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .section-header .line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, var(--lavender) 0%, transparent 100%);
+    }
+
+    .spots-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .spots-grid { grid-template-columns: 1fr; }
+    }
+
+    .spot-card {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(196,167,215,0.15);
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    .spot-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(139,107,174,0.12);
+    }
+
+    .spot-icon {
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+
+    .spot-card:nth-child(1) .spot-icon { background: linear-gradient(135deg, #e8f4f8, #c4e0ed); }
+    .spot-card:nth-child(2) .spot-icon { background: linear-gradient(135deg, #d4f1f5, #a8d8ea); }
+    .spot-card:nth-child(3) .spot-icon { background: linear-gradient(135deg, #f0e8f5, #ddc8f0); }
+    .spot-card:nth-child(4) .spot-icon { background: linear-gradient(135deg, #e8f5e9, #b8dac5); }
+    .spot-card:nth-child(5) .spot-icon { background: linear-gradient(135deg, #fff8e8, #f5e4c3); }
+    .spot-card:nth-child(6) .spot-icon { background: linear-gradient(135deg, #f5e8e8, #edd4d4); }
+
+    .spot-body {
+      padding: 24px;
+    }
+
+    .spot-time {
+      display: inline-block;
+      background: var(--lavender);
+      color: white;
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      border-radius: 100px;
+      margin-bottom: 12px;
+    }
+
+    .spot-name {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .spot-desc {
+      font-size: 0.9rem;
+      color: #6b6574;
+      line-height: 1.7;
+    }
+
+    /* Timeline */
+    .timeline-section {
+      background: linear-gradient(180deg, #f9f5ff 0%, #f5faff 100%);
+      padding: 100px 24px;
+    }
+
+    .timeline-section .section {
+      padding: 0 24px;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 24px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--lavender), var(--tiffany));
+    }
+
+    .timeline-item {
+      position: relative;
+      padding-left: 72px;
+      padding-bottom: 48px;
+    }
+
+    .timeline-item:last-child { padding-bottom: 0; }
+
+    .timeline-dot {
+      position: absolute;
+      left: 14px;
+      top: 4px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: white;
+      border: 3px solid var(--lavender-deep);
+      z-index: 1;
+    }
+
+    .timeline-item.active .timeline-dot {
+      background: var(--lavender-deep);
+    }
+
+    .timeline-time {
+      font-size: 0.8rem;
+      color: var(--lavender-deep);
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+
+    .timeline-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .timeline-sub {
+      font-size: 0.85rem;
+      color: #8a8394;
+    }
+
+    /* Advice */
+    .advice-section {
+      background: var(--charcoal);
+      color: white;
+      padding: 100px 24px;
+    }
+
+    .advice-section .section-header h2 {
+      color: white;
+    }
+
+    .advice-section .section-header .line {
+      background: linear-gradient(90deg, rgba(196,167,215,0.5) 0%, transparent 100%);
+    }
+
+    .advice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .advice-grid { grid-template-columns: 1fr; }
+    }
+
+    .advice-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 28px;
+      backdrop-filter: blur(8px);
+      transition: all 0.3s ease;
+    }
+
+    .advice-card:hover {
+      background: rgba(255,255,255,0.1);
+      transform: translateY(-3px);
+    }
+
+    .advice-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      color: var(--tiffany);
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .advice-title {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .advice-desc {
+      font-size: 0.88rem;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.75;
+    }
+
+    /* Review */
+    .review-section {
+      padding: 100px 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .review-highlight {
+      background: linear-gradient(135deg, #f5f0ff, #e8f5ff);
+      border-radius: 24px;
+      padding: 48px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .review-highlight { grid-template-columns: 1fr; text-align: center; }
+    }
+
+    .review-score {
+      text-align: center;
+    }
+
+    .review-score .big {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--lavender-deep);
+      line-height: 1;
+    }
+
+    .review-score .total {
+      font-size: 1rem;
+      color: #8a8394;
+      margin-top: 4px;
+    }
+
+    .review-stars {
+      color: #F5B700;
+      font-size: 1.3rem;
+      letter-spacing: 2px;
+      margin-top: 8px;
+    }
+
+    .review-summary h3 {
+      font-family: 'Noto Serif TC', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .review-bars {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 16px;
+    }
+
+    .review-bar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.85rem;
+    }
+
+    .review-bar .name { width: 60px; color: #6b6574; }
+
+    .review-bar .bar-bg {
+      flex: 1;
+      height: 6px;
+      background: rgba(139,107,174,0.15);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .review-bar .bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--lavender-deep), var(--tiffany));
+      border-radius: 3px;
+    }
+
+    .review-bar .score { width: 30px; text-align: right; color: var(--lavender-deep); font-weight: 500; }
+
+    .review-quote {
+      background: white;
+      border-radius: 16px;
+      padding: 32px;
+      border: 1px solid rgba(196,167,215,0.15);
+      position: relative;
+    }
+
+    .review-quote::before {
+      content: '"';
+      font-family: 'Noto Serif TC', serif;
+      font-size: 5rem;
+      color: var(--lavender);
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      line-height: 1;
+    }
+
+    .review-text {
+      font-size: 0.95rem;
+      line-height: 1.85;
+      color: #4a4654;
+      padding-left: 40px;
+    }
+
+    .review-author {
+      margin-top: 16px;
+      padding-left: 40px;
+      font-size: 0.82rem;
+      color: #a09aad;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 60px 24px;
+      background: #f5f0ff;
+    }
+
+    .footer p {
+      font-size: 0.82rem;
+      color: #a09aad;
+    }
+
+    .footer a {
+      color: var(--lavender-deep);
+      text-decoration: none;
+    }
+
+    /* Rating badges */
+    .rating-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: white;
+      border: 1px solid rgba(196,167,215,0.2);
+      border-radius: 100px;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      color: var(--lavender-deep);
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-badge">🌿 Klook 一日遊推薦</div>
+  <h1 class="hero-title">北海道<br><span>富良野・美瑛・四季彩之丘</span><br>一日遊懶人包</h1>
+  <p class="hero-sub">從札幌出發，帶你走訪雲霄飛車之路、青池、四季彩之丘與富田農場，輕鬆擁抱北海道的夏日花海</p>
+
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <span class="num">10h</span>
+      <span class="label">行程時長</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="num">6</span>
+      <span class="label">經典景點</span>
+    </div>
+    <div class="hero-meta-item">
+      <span class="num">4.8</span>
+      <span class="label">評分滿分</span>
+    </div>
+  </div>
+
+  <div class="hero-cta">
+    <a href="https://s.klook.com/c/mXYgmLv9w2" target="_blank">
+      查看 Klook 行程 👉
+    </a>
+  </div>
+
+  <div class="scroll-hint">
+    <span>SCROLL</span>
+    <span>↓</span>
+  </div>
+</section>
+
+<!-- 景點介紹 -->
+<section class="section">
+  <div class="section-header">
+    <h2>🌸 景點與特色</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="spots-grid">
+    <div class="spot-card">
+      <div class="spot-icon">🛤️</div>
+      <div class="spot-body">
+        <span class="spot-time">車覽 5 分鐘</span>
+        <h3 class="spot-name">雲霄飛車之路</h3>
+        <p class="spot-desc">視覺衝擊力十足的蜿蜒山路，車覽即可感受其壯觀與刺激感。</p>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-icon">💧</div>
+      <div class="spot-body">
+        <span class="spot-time">自由活動 30 分鐘</span>
+        <h3 class="spot-name">白金青池</h3>
+        <p class="spot-desc">雲霧繚繞的仙境，池水呈夢幻 Tiffany 藍，美不勝收。推薦嘗試藍池冰淇淋。</p>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-icon">🌷</div>
+      <div class="spot-body">
+        <span class="spot-time">自由活動 50 分鐘</span>
+        <h3 class="spot-name">四季彩之丘</h3>
+        <p class="spot-desc">15公頃起伏丘陵，30多種花卉競相開放，還有羊駝！如拼布般的田園景色。</p>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-icon">🧺</div>
+      <div class="spot-body">
+        <span class="spot-time">午餐 60 分鐘</span>
+        <h3 class="spot-name">Herb Garden 富良野</h3>
+        <p class="spot-desc">自助午餐（30分）+ 蜜瓜放題（20分），使用當地新鮮食材，多汁甜哈密瓜幾乎是必吃。</p>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-icon">💜</div>
+      <div class="spot-body">
+        <span class="spot-time">自由活動 60 分鐘</span>
+        <h3 class="spot-name">富田農場</h3>
+        <p class="spot-desc">薰衣草花田巔峰期為6月底～8月初，温室全年可看薰衣草。必吃薰衣草冰淇淋、哈密瓜麵包。</p>
+      </div>
+    </div>
+
+    <div class="spot-card">
+      <div class="spot-icon">🌲</div>
+      <div class="spot-body">
+        <span class="spot-time">自由活動 60 分鐘</span>
+        <h3 class="spot-name">森林精靈露台</h3>
+        <p class="spot-desc">如富田農場花況不佳，則改為此景點。充滿童話感的木屋手作街，散步購物皆宜。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 行程時間軸 -->
+<section class="timeline-section">
+  <div class="section">
+    <div class="section-header">
+      <h2>⏰ 行程時間軸</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item active">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">08:10 出發</div>
+        <div class="timeline-title">大通地鐵站 31 號出口集合</div>
+        <div class="timeline-sub">請提早 10 分鐘抵達，尋找持 Klook 標誌的導遊</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">行車中</div>
+        <div class="timeline-title">車覽「雲霄飛車之路」</div>
+        <div class="timeline-sub">5 分鐘車覽，視覺衝擊強烈的蜿蜒山路</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">抵達</div>
+        <div class="timeline-title">白金青池</div>
+        <div class="timeline-sub">自由活動 30 分鐘 · 推薦：藍池冰淇淋、藍豬肉包</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">午餐</div>
+        <div class="timeline-title">Herb Garden 富良野 自助午餐</div>
+        <div class="timeline-sub">30 分鐘自助餐 + 20 分鐘蜜瓜放題</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">下午</div>
+        <div class="timeline-title">四季彩之丘</div>
+        <div class="timeline-sub">自由活動 50 分鐘 · 羊駝、花田、起伏丘陵如拼布</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">14:30 -</div>
+        <div class="timeline-title">富田農場 或 森林精靈露台</div>
+        <div class="timeline-sub">自由活動約 60 分鐘</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-time">18:00 返程</div>
+        <div class="timeline-title">回到大通地鐵站 31 號出口</div>
+        <div class="timeline-sub">行程時長約 10 小時 10 分鐘</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 建議 -->
+<section class="advice-section">
+  <div class="section">
+    <div class="section-header">
+      <h2>💡 行程建議</h2>
+      <div class="line"></div>
+    </div>
+
+    <div class="advice-grid">
+      <div class="advice-card">
+        <span class="advice-tag">預訂建議</span>
+        <h3 class="advice-title">推薦選含午餐方案</h3>
+        <p class="advice-desc">多數評價一致推薦含自助午餐的方案，蜜瓜正值產季（6-8月），多汁香甜吃到飽，CP值最高。</p>
+      </div>
+      <div class="advice-card">
+        <span class="advice-tag">天氣與花況</span>
+        <h3 class="advice-title">薰衣草黃金期：6月底～8月初</h3>
+        <p class="advice-desc">花況依每年氣候變化，如遇天候不佳導致花海未達預期，導遊會彈性調整行程，請抱持隨遇而安的心。</p>
+      </div>
+      <div class="advice-card">
+        <span class="advice-tag">集合注意事項</span>
+        <h3 class="advice-title">遲到恕不退費</h3>
+        <p class="advice-desc">務必提早 10 分鐘到場。10人以下派小車司機兼導遊，至少 6 人成團。攜帶行李請提前 3 天メール告知。</p>
+      </div>
+      <div class="advice-card">
+        <span class="advice-tag">美食推薦</span>
+        <h3 class="advice-title">必吃清單</h3>
+        <p class="advice-desc">🥬 蜜瓜（農場產季） · 💜 薰衣草冰淇淋 · 🍞 哈密瓜麵包（富田農場） · 🌽 玉米 · 🥟 藍豬肉包（青池）</p>
+      </div>
+      <div class="advice-card">
+        <span class="advice-tag">保險建議</span>
+        <h3 class="advice-title">建議自行投保旅遊不便險</h3>
+        <p class="advice-desc">天候不佳或不可抗力導致行程取消，可申請理赔。24小時前可免費取消，請妥善利用。</p>
+      </div>
+      <div class="advice-card">
+        <span class="advice-tag">適合族群</span>
+        <h3 class="advice-title">不想自駕、想輕鬆遊覽</h3>
+        <p class="advice-desc">不想自己開車或搭公共交通，適合家庭、情侶、朋友同行。有中文導遊，溝通無礙。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 評價精選 -->
+<section class="review-section">
+  <div class="section-header">
+    <h2>⭐ 評價精選</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="review-highlight">
+    <div class="review-score">
+      <div class="big">4.8</div>
+      <div class="total">/ 5</div>
+      <div class="review-stars">★★★★★</div>
+      <span class="rating-badge">653則評價</span>
+    </div>
+    <div class="review-summary">
+      <h3>超讚體驗，導遊備受讚譽</h3>
+      <p style="color:#6b6574; font-size:0.9rem; margin-bottom:4px;">各面向評分皆接近滿分</p>
+      <div class="review-bars">
+        <div class="review-bar">
+          <span class="name">導遊</span>
+          <div class="bar-bg"><div class="bar-fill" style="width:98%"></div></div>
+          <span class="score">4.9</span>
+        </div>
+        <div class="review-bar">
+          <span class="name">行程</span>
+          <div class="bar-bg"><div class="bar-fill" style="width:96%"></div></div>
+          <span class="score">4.8</span>
+        </div>
+        <div class="review-bar">
+          <span class="name">交通</span>
+          <div class="bar-bg"><div class="bar-fill" style="width:98%"></div></div>
+          <span class="score">4.9</span>
+        </div>
+        <div class="review-bar">
+          <span class="name">CP值</span>
+          <div class="bar-bg"><div class="bar-fill" style="width:96%"></div></div>
+          <span class="score">4.8</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="review-quote">
+    <p class="review-text">走進富田農場，眼前是一片溫柔的紫色海洋。薰衣草隨微風輕輕搖曳，空氣中瀰漫著淡雅清香，彷彿連呼吸都被療癒。站在高台上俯瞰整個農場，內心只剩下讚嘆與感動。</p>
+    <p class="review-author">— Su，2025/06/15，★5.0 含午餐方案</p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p>資料來源：<a href="https://s.klook.com/c/mXYgmLv9w2" target="_blank">Klook 富良野美瑛一日遊</a></p>
+  <p style="margin-top:8px;">整理 by 蝦米龍蝦 🦞</p>
+</footer>
+
+</body>
+</html>
