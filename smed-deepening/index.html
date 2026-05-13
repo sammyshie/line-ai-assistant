@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<title>SMED 深化｜快速換線教材</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ * { box-sizing: border-box; margin: 0; padding: 0; }
+ html, body { height: 100%; font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; background: #0f172a; color: #e2e8f0; overflow: hidden; }
+ #deck { position: relative; width: 100vw; height: 100vh; }
+ .slide { position: absolute; inset: 0; padding: 6vh 8vw; display: none; flex-direction: column; justify-content: center; animation: fadein .35s ease; }
+ .slide.active { display: flex; }
+ @keyframes fadein { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+ .eyebrow { color: #38bdf8; font-size: 1rem; letter-spacing: .2em; margin-bottom: 1rem; text-transform: uppercase; }
+ h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.15; color: #f8fafc; margin-bottom: 1rem; }
+ h2 { font-size: clamp(1.8rem, 3.6vw, 2.8rem); color: #f1f5f9; margin-bottom: 1.2rem; border-left: 6px solid #38bdf8; padding-left: .8rem; }
+ h3 { font-size: 1.4rem; color: #fbbf24; margin: .8rem 0; }
+ p, li { font-size: clamp(1rem, 1.6vw, 1.35rem); line-height: 1.7; color: #cbd5e1; }
+ ul { padding-left: 1.4rem; }
+ li { margin: .35rem 0; }
+ .grid { display: grid; gap: 1.2rem; margin-top: 1rem; }
+ .grid.cols-2 { grid-template-columns: 1fr 1fr; }
+ .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+ .card { background: rgba(30, 41, 59, .8); border: 1px solid #334155; border-radius: 14px; padding: 1.2rem 1.4rem; }
+ .card.hl { border-color: #38bdf8; box-shadow: 0 0 0 2px rgba(56,189,248,.15); }
+ .tag { display: inline-block; background: #1e293b; color: #38bdf8; padding: .2rem .7rem; border-radius: 999px; font-size: .85rem; margin-right: .4rem; }
+ .kpi { color: #34d399; font-weight: 700; }
+ .bad { color: #f87171; }
+ .hint { color: #94a3b8; font-size: .95rem; margin-top: .8rem; }
+ footer { position: fixed; bottom: 1rem; left: 0; right: 0; display: flex; justify-content: space-between; padding: 0 2rem; color: #64748b; font-size: .9rem; }
+ .btn { background: #1e293b; border: 1px solid #334155; color: #e2e8f0; padding: .35rem .8rem; border-radius: 8px; cursor: pointer; font-size: .9rem; }
+ .btn:hover { background: #334155; }
+ .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #334155; margin: 0 3px; }
+ .dot.on { background: #38bdf8; }
+ .cover { background: radial-gradient(circle at 20% 20%, #1e3a8a 0%, #0f172a 60%); }
+ .big { font-size: clamp(2rem, 4vw, 3rem); color: #f8fafc; font-weight: 800; }
+</style>
+</head>
+<body>
+<div id="deck">
+
+ <!-- Slide 1: 封面 -->
+ <section class="slide active cover">
+ <div class="eyebrow">精實管理｜Lean Production</div>
+ <h1>SMED 深化<br>讓快速換線變成可複製的能力</h1>
+ <p>單分鐘換模（Single-Minute Exchange of Die）的下一步：穩定、可複製、可擴散</p>
+ <p class="hint">使用 ← → 切換投影片 | 按 F 全螢幕</p>
+ </section>
+
+ <!-- Slide 2: 一句話 -->
+ <section class="slide">
+ <div class="eyebrow">01 ｜核心定義</div>
+ <h2>一句話講清楚 SMED</h2>
+ <div class="card hl">
+ <p>把換線工作拆成<span class="kpi">「內部 / 外部」</span>，盡量把<span class="kpi">內部作業（停機才能做）外部化</span>，再把剩下的內部作業 <strong>簡化、並行化、標準化</strong>，以縮短停機時間。</p>
+ </div>
+ <div class="grid cols-2" style="margin-top:1.5rem">
+ <div class="card"><h3>🔴 內部作業</h3><p>必須停機才能做的事<br>（拆模、上模、定位）</p></div>
+ <div class="card"><h3>🟢 外部作業</h3><p>機器仍在運轉時就能準備的事<br>（備料、備工具、預組）</p></div>
+ </div>
+ </section>
+
+ <!-- Slide 3: 6 層次總覽 -->
+ <section class="slide">
+ <div class="eyebrow">02 ｜深化六層次</div>
+ <h2>從淺到深，SMED 深化的 6 個層次</h2>
+ <div class="grid cols-3">
+ <div class="card"><h3>① 一次改善 → 標準</h3><p>把成果固化為 SOP</p></div>
+ <div class="card"><h3>② 主觀 → 數據化</h3><p>量測明細時間</p></div>
+ <div class="card"><h3>③ 單點 → 系統性</h3><p>處理源頭浪費</p></div>
+ <div class="card"><h3>④ 技術 → 同步</h3><p>供應 / 物流 / 資訊</p></div>
+ <div class="card"><h3>⑤ 快 → 一次到位</h3><p>首件 OK 率</p></div>
+ <div class="card"><h3>⑥ 單機 → 複製</h3><p>擴散到產品族群</p></div>
+ </div>
+ </section>
+
+ <!-- Slide 4 -->
+ <section class="slide">
+ <div class="eyebrow">層次 ①</div>
+ <h2>從一次改善 → 變成標準</h2>
+ <ul>
+ <li>改善不是「做完就結案」，而是要<strong>固化</strong>。</li>
+ <li>把新方法寫成 <span class="tag">SOP</span><span class="tag">點檢表</span><span class="tag">OJT 教學法</span>。</li>
+ <li>確保<span class="kpi">不同班別、不同人</span>都照同一套做，減少人因變異。</li>
+ </ul>
+ <div class="card hl" style="margin-top:1.5rem"><p>📌 深化重點：<strong>沒有標準，就沒有改善的延續</strong>。</p></div>
+ </section>
+
+ <!-- Slide 5 -->
+ <section class="slide">
+ <div class="eyebrow">層次 ②</div>
+ <h2>從主觀估計 → 數據化管理</h2>
+ <p>別只看「總換線時間」，要拆解成可分析的明細：</p>
+ <div class="grid cols-2" style="margin-top:1rem">
+ <div class="card"><h3>📊 必要量測項</h3>
+ <ul>
+ <li>內部 / 外部時間</li>
+ <li>等待時間</li>
+ <li>找工具時間</li>
+ <li>調整時間</li>
+ <li>首件確認時間</li>
+ </ul>
+ </div>
+ <div class="card"><h3>🎯 為什麼這樣拆</h3><p>看得到才改得動。把「黑盒子」拆成可比較的小區塊，才有改善方向。</p></div>
+ </div>
+ </section>
+
+ <!-- Slide 6 -->
+ <section class="slide">
+ <div class="eyebrow">層次 ③</div>
+ <h2>從單點改善 → 系統性消除浪費</h2>
+ <p>不只改善動作，要處理<strong>造成浪費的源頭</strong>：</p>
+ <div class="grid cols-2">
+ <div class="card"><h3>🔧 治具設計</h3><p>夾治具是否好拆好裝？</p></div>
+ <div class="card"><h3>📍 夾治具定位</h3><p>是否需要量測對位？</p></div>
+ <div class="card"><h3>📦 材料供應方式</h3><p>是否能線邊就位？</p></div>
+ <div class="card"><h3>✅ 品質判定方式</h3><p>首件能否一次過？</p></div>
+ </div>
+ </section>
+
+ <!-- Slide 7 -->
+ <section class="slide">
+ <div class="eyebrow">層次 ④</div>
+ <h2>從技術改善 → 供應／物流／資訊同步</h2>
+ <p>外部化要成功，常常要靠「跨單位提前到位」：</p>
+ <ul>
+ <li><strong>物料</strong>預先備料、線邊定位</li>
+ <li><strong>前段製程</strong>提前準備、提前送達</li>
+ <li><strong>系統</strong>提前開工單、文件提前就緒</li>
+ <li><strong>工具</strong>由備料人員預先點檢、上車</li>
+ </ul>
+ <div class="card hl" style="margin-top:1.2rem"><p>👉 SMED 深化的成功＝<span class="kpi">跨部門協作的成功</span>。</p></div>
+ </section>
+
+ <!-- Slide 8 -->
+ <section class="slide">
+ <div class="eyebrow">層次 ⑤</div>
+ <h2>從縮短換線 → 提升「一次到位」</h2>
+ <p>換線快但<span class="bad">首件不穩 / 反覆調機 / 報廢增加</span>＝沒有真正改善。</p>
+ <div class="grid cols-2" style="margin-top:1rem">
+ <div class="card"><h3>必納入 KPI</h3>
+ <ul>
+ <li>首件一次 OK 率</li>
+ <li>調整次數</li>
+ <li>換線後報廢率</li>
+ </ul>
+ </div>
+ <div class="card"><h3>背後的觀念</h3><p>速度只是手段，<strong>穩定的速度</strong>才是真本事。</p></div>
+ </div>
+ </section>
+
+ <!-- Slide 9 -->
+ <section class="slide">
+ <div class="eyebrow">層次 ⑥</div>
+ <h2>從單機台 → 複製到產品族群／產線</h2>
+ <p>把方法抽象成可複製的「<strong>換線模組</strong>」：</p>
+ <div class="grid cols-2">
+ <div class="card"><h3>🛠 通用工具車</h3><p>每族群一格、影子板定位</p></div>
+ <div class="card"><h3>🔌 通用治具接口</h3><p>統一介面、隨插即用</p></div>
+ <div class="card"><h3>📐 通用定位基準</h3><p>一次定位、不靠師傅手感</p></div>
+ <div class="card"><h3>📑 通用檢查規格</h3><p>首件判定可量化</p></div>
+ </div>
+ </section>
+
+ <!-- Slide 10 -->
+ <section class="slide">
+ <div class="eyebrow">03 ｜落地範例</div>
+ <h2>三個現場能直接做的範例</h2>
+ <div class="grid cols-3">
+ <div class="card"><h3>A. 換線工具車</h3><p><strong>原狀況</strong>：換線才找工具<br><strong>做法</strong>：每族群一格＋影子板，備料人員前 10 分鐘點檢→外部化<br><span class="kpi">效果：找工具時間趨近 0</span></p></div>
+ <div class="card"><h3>B. 機構防呆＋基準化</h3><p><strong>原狀況</strong>：靠師傅微調對位<br><strong>做法</strong>：定位銷、止擋、Poka-Yoke、一次定位設計<br><span class="kpi">效果：調整↓ 首件 OK↑</span></p></div>
+ <div class="card"><h3>C. 並行作業設計</h3><p><strong>原狀況</strong>：一人按序做完才換下一步<br><strong>做法</strong>：A 拆舊模、B 同時預組新模<br><span class="kpi">效果：總停機時間明顯下降</span></p></div>
+ </div>
+ </section>
+
+ <!-- Slide 11 -->
+ <section class="slide">
+ <div class="eyebrow">04 ｜帶走重點</div>
+ <h2>衡量指標 ＆ 行動清單</h2>
+ <div class="grid cols-2">
+ <div class="card"><h3>📈 衡量指標</h3>
+ <ul>
+ <li>停機換線時間（內部時間）</li>
+ <li>外部作業完成率</li>
+ <li>首件一次 OK 率 / 調整次數</li>
+ <li>不同班別、不同人的時間變異</li>
+ </ul>
+ </div>
+ <div class="card hl"><h3>🚀 下一步行動</h3>
+ <ul>
+ <li>選一條產線做基線量測</li>
+ <li>列出可外部化的項目清單</li>
+ <li>製作工具車與點檢表</li>
+ <li>加入定位防呆設計</li>
+ <li>把成果固化為 SOP，並擴散</li>
+ </ul>
+ </div>
+ </div>
+ <p class="big" style="margin-top:1.5rem">速度只是手段，<span style="color:#fbbf24">穩定的速度</span>才是真本事。</p>
+ </section>
+
+</div>
+
+<footer>
+ <div>
+ <button class="btn" onclick="prev()">◀ 上一張</button>
+ <button class="btn" onclick="next()">下一張 ▶</button>
+ <button class="btn" onclick="toggleFs()">⛶ 全螢幕</button>
+ </div>
+ <div id="dots"></div>
+ <div><span id="page">1</span> / <span id="total">11</span> © Sammy 川海企管顧問</div>
+</footer>
+
+<script>
+ const slides = document.querySelectorAll('.slide');
+ const dotsBox = document.getElementById('dots');
+ let i = 0;
+ document.getElementById('total').textContent = slides.length;
+ slides.forEach((_, idx) => {
+ const d = document.createElement('span');
+ d.className = 'dot' + (idx === 0 ? ' on' : '');
+ d.onclick = () => go(idx);
+ dotsBox.appendChild(d);
+ });
+ function go(n) {
+ i = (n + slides.length) % slides.length;
+ slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
+ document.querySelectorAll('.dot').forEach((d, idx) => d.classList.toggle('on', idx === i));
+ document.getElementById('page').textContent = i + 1;
+ }
+ function next() { go(i + 1); }
+ function prev() { go(i - 1); }
+ function toggleFs() {
+ if (!document.fullscreenElement) document.documentElement.requestFullscreen();
+ else document.exitFullscreen();
+ }
+ document.addEventListener('keydown', e => {
+ if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') next();
+ else if (e.key === 'ArrowLeft' || e.key === 'PageUp') prev();
+ else if (e.key.toLowerCase() === 'f') toggleFs();
+ else if (e.key === 'Home') go(0);
+ else if (e.key === 'End') go(slides.length - 1);
+ });
+</script>
+</body>
+</html>
